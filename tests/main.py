@@ -60,7 +60,7 @@ def get_jobs(url):
 
 data = []
 for i in range(1, pages + 1):
-    url = base_url + path + '?pageno=' + str(i)
+    url = base_url + path + '/sida' + str(i)
     data += get_jobs(url)
     with open('data.json', 'w') as outfile:
         json.dump(data, outfile)
